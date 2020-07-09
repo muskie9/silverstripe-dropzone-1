@@ -52,7 +52,11 @@ const InitDropzoneField = (dropzoneFieldHolder) => {
     });
   } else {
     dropzone.on('success', (file, response) => {
-      addHiddenInput(file, response[0]);
+      if (file.upload.chunked) {
+        addHiddenInput(file, JSON.parse(file.xhr.response)[0]);
+      } else {
+        addHiddenInput(file, response[0]);
+      }
     });
   }
 
