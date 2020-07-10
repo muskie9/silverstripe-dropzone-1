@@ -22,11 +22,11 @@
     "dropzone": "^5.5.1",
     "jquery": "^3.5.0",
     "mime": "^1.4.1",
+    "@silverstripe/webpack-config": "^0.8.0",
     "react": "15.3.1"
   },
   "devDependencies": {
     "@silverstripe/eslint-config": "^0.0.4",
-    "@silverstripe/webpack-config": "^0.8.0",
     "webpack": "^2"
   },
   "babel": {

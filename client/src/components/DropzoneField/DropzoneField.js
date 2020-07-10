@@ -53,6 +53,8 @@ const InitDropzoneField = (dropzoneFieldHolder) => {
   } else {
     dropzone.on('success', (file, response) => {
       if (file.upload.chunked) {
+        console.log(response);
+        console.log(file);
         addHiddenInput(file, JSON.parse(file.xhr.response)[0]);
       } else {
         addHiddenInput(file, response[0]);
